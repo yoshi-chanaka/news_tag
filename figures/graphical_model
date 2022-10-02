@@ -1,0 +1,15 @@
+digraph {
+	p [label="p ~ Beta"]
+	a [label="a ~ Deterministic" shape=box]
+	tau [label="tau ~ Exponential"]
+	b [label="b ~ Deterministic" shape=box]
+	subgraph cluster7 {
+		x [label="x ~ Bernoulli" style=filled]
+		label=7 labeljust=r labelloc=b style=rounded
+	}
+	tau -> a
+	tau -> b
+	a -> p
+	b -> p
+	p -> x
+}
